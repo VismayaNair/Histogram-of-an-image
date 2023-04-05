@@ -27,22 +27,22 @@ The Histogram of gray scale image and color image is shown.
 <br>
 
 ## Program:
-```python
-# Developed By: VISMAYA
-# Register Number:212221230125
+
+Developed By: VISMAYA
+
+Register Number:212221230125
+```
 import cv2
 import matplotlib.pyplot as plt
-
-
-# Write your code to find the histogram of gray scale image and color image channels.
-
-
+```
+# Code to find the histogram of gray scale image and color image channels:
+```
 gray = cv2.imread('d4.jpeg')
 color= cv2.imread('d4.jpeg')
 plt.imshow(gray)
-
-# Display the histogram of gray scale image and any one channel histogram from color image
-
+```
+#  Displaying the histogram of gray scale image and any one channel histogram from color image:
+```
 gray_hist = cv2.calcHist([gray],[0],None,[256],[0,255])
 plt.figure()
 plt.title("grayscale")
@@ -62,12 +62,9 @@ plt.show()
 plt.show()
 plt.imshow(color)
 plt.show()
-
-
-
-# Write the code to perform histogram equalization of the image. 
-
-
+```
+# The code to perform histogram equalization of the image. 
+```
 import cv2
 gray=cv2.imread('d4.jpeg',0)
 equ = cv2.equalizeHist(gray)
@@ -75,8 +72,6 @@ cv2.imshow('NEW GRAY IMAGE',gray)
 cv2.imshow('NEW EQUALIZED IMAGE',equ)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
